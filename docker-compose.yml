@@ -1,0 +1,11 @@
+version: "0.1"
+services:
+  web:
+    build: .
+    volumes:
+      - ./:/opt/app/
+    ports:
+      - 1337:1337
+    command: bash -c "npm install && npm start"
+    stdin_open: true
+    tty: true
